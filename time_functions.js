@@ -17,14 +17,19 @@ export default (() => {
 
             return `${hours}:${minutes}`
         },
+        
         randomNumberBetween: (min,max) => Math.floor(Math.random() * (max - min + 1)) + min,
-        countDownFrom: (number) => {
-            console.log('Count down from ' + number)
-            let timer = setInterval(() => {
+
+        countDownFrom: (number, timeToComplete) => {
+            console.log('Use '+timeToComplete+'s to count down from ' + number)
+
+            const callbackInterval = 1000 / (number / timeToComplete)
+
+            const timer = setInterval(() => {
                 number <= 0 
-                ? (clearInterval(timer), console.log('count down stopped')) 
+                ? (clearInterval(timer), console.log('Count down stopped')) 
                 : (number--, console.log(number))
-            }, 1000)
+            }, callbackInterval)
         }
     }
 })();
