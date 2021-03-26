@@ -1,3 +1,5 @@
 import time from './time_functions.js'
 
-time.test()
+
+
+console.log(time.currentDate());
