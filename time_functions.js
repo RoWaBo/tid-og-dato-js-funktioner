@@ -17,7 +17,7 @@ export default (() => {
 
             return `${hours}:${minutes}`
         },
-        
+
         randomNumberBetween: (min,max) => Math.floor(Math.random() * (max - min + 1)) + min,
 
         countDownFrom: (number, timeToComplete) => {
