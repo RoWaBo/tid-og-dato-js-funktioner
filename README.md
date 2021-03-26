@@ -1,5 +1,5 @@
 # tid-og-dato-js-funktioner
-  * Byg følgende ved hjælp af funktioner 
+## Byg følgende ved hjælp af funktioner 
   * Byg en funktion som returnerer dags dato. Med dette format: 02-11-2021 
   * Byg en funktion som returnerer klokken. Med dette format: 16:30 
   * Byg en funktion som returnerer et tal mellem 2 forskellige tal (parametre) 
