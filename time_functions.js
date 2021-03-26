@@ -20,6 +20,7 @@ export default (() => {
             if (hours < 10) hours = "0" + hours;
 
             return `${hours}:${minutes}`
-        }
+        },
+        randomNumberBetween: (x,y) => Math.floor(Math.random() * (y - x + 1)) + x
     }
 })();
