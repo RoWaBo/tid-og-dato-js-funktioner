@@ -1,8 +1,8 @@
 export default (() => {
     const date = new Date()
 
-    let addZero = (a) => (a < 10) ? a = "0" + a : a;
-        
+    const addZero = (a) => (a < 10) ? a = "0" + a : a;
+    
     return {
         currentDate: () => {
             let day = addZero(date.getDate())
@@ -17,6 +17,14 @@ export default (() => {
 
             return `${hours}:${minutes}`
         },
-        randomNumberBetween: (x,y) => Math.floor(Math.random() * (y - x + 1)) + x
+        randomNumberBetween: (min,max) => Math.floor(Math.random() * (max - min + 1)) + min,
+        countDownFrom: (number) => {
+            console.log('Count down from ' + number)
+            let timer = setInterval(() => {
+                number <= 0 
+                ? (clearInterval(timer), console.log('count down stopped')) 
+                : (number--, console.log(number))
+            }, 1000)
+        }
     }
 })();
